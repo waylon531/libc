@@ -270,6 +270,9 @@ cfg_if! {
     } else if #[cfg(target_os = "redox")] {
         mod redox;
         pub use redox::*;
+    } else if #[cfg(target_os = "wayless")] {
+        mod wayless;
+        pub use wayless::*;
     } else if #[cfg(unix)] {
         mod unix;
         pub use unix::*;
